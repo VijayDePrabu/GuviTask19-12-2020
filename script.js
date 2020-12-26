@@ -70,7 +70,27 @@ console.log("Prime number");
 } 
 
 // * Return all the palindromes in an array 
+let strArr = ["vibgyor","memo", "Malayalam", "Madam", "dented", "2020", "neem", "meme"];
+let palindromes = [];
+for(i in strArr){
+    let word = strArr[i].split("");
+    let reverseWord = strArr[i].split("").reverse();
+    let k= word.length;
+     for(i in word){
+         if((word[i].toLowerCase()).localeCompare((reverseWord[i].toLowerCase())) === 0){
+             
+         }else{
+           k = parseInt(i);
+           break;
+         }
+     }
+     if((k) === word.length){
+        palindromes.push(word.join(""));
+     }
+     console.log("word tested: "+ word.join("") +" "+ reverseWord.join("")+" "+ (k)+ " "+ word.length);
 
+}
+console.log("Palindrome: "+ palindromes);
 // * Return median of two sorted arrays of same size 
 
 // * Remove duplicates from an array
